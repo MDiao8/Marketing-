@@ -1,0 +1,262 @@
+/* ========== GENERAL ========== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', serif;
+  background-color: #fffdf6;
+  color: #3c2f07;
+  margin: 0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: #6b4e16;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #b37c00;
+}
+
+/* ========== HEADER & NAVIGATION ========== */
+
+header {
+  background-color: #e4c590;
+  padding: 1rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  margin: 0;
+  font-weight: normal;
+  font-size: 2.2rem;
+  color: #4b3000;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+nav li {
+  font-weight: bold;
+}
+
+nav a {
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+}
+
+nav a.active,
+nav a:hover {
+  color: #b37c00;
+  border-bottom: 2px solid #b37c00;
+  padding-bottom: 0.1rem;
+}
+
+/* ========== MAIN CONTENT ========== */
+
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ========== HOMEPAGE HERO SECTION ========== */
+
+.hero {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.hero-text {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1.5rem 2.5rem;
+  border-radius: 12px;
+  max-width: 450px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.hero-text h2 {
+  margin-top: 0;
+  font-size: 2.2rem;
+  color: #a57200;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  color: #5b4611;
+}
+
+/* ========== FEATURES OVERVIEW ON HOMEPAGE ========== */
+
+.features-overview {
+  text-align: center;
+}
+
+.features-overview h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #6b4e16;
+}
+
+.feature-boxes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.feature {
+  background-color: #f6ebd2;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(107,78,22,0.15);
+  width: 280px;
+  text-decoration: none;
+  color: #4b3000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(107,78,22,0.3);
+}
+
+.feature img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.feature h4 {
+  margin: 1rem 0;
+  font-size: 1.3rem;
+}
+
+/* ========== FEATURE DETAIL PAGES ========== */
+
+.feature-detail h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #a57200;
+}
+
+.feature-detail p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #5b4611;
+}
+
+.feature-detail ul {
+  list-style: disc inside;
+  max-width: 700px;
+  margin-bottom: 2rem;
+  color: #4b3000;
+  font-weight: 500;
+}
+
+.feature-detail ul li {
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+}
+
+.feature-detail article {
+  margin-bottom: 2rem;
+}
+
+.feature-detail article h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #6b4e16;
+}
+
+.feature-detail article img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+}
+
+/* ========== FOOTER ========== */
+
+footer {
+  background-color: #f4e2bc;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #4b3000;
+  margin-top: auto;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+
+@media (max-width: 900px) {
+  .feature-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    font-size: 1rem;
+  }
+
+  .hero-text {
+    position: static;
+    margin-top: 1rem;
+    background: #fffdf6;
+    padding: 1rem 1.5rem;
+    box-shadow: none;
+    max-width: none;
+  }
+
+  .hero img {
+    height: 250px;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
